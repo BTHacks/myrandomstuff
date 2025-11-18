@@ -1,0 +1,2 @@
+As the file name suggests, this is literally just a zip bomb creator. Don't run unless you know what you're doing
+According to my calculator, it creates 1e+20 folders

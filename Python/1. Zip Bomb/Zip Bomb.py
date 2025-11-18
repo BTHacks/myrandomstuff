@@ -58,6 +58,27 @@ while bomb1 >= 1:
                         bomb7txt = str(bomb7)
                         while bomb7 >= 1:
                             os.makedirs(dir7 + bomb7txt)
+                            dir8 = dir7 + bomb7txt + "/"
+                            bomb8 = int(100)
+                            bomb8txt = str(bomb8)
+                            while bomb8 >= 1:
+                                os.makedirs(dir8 + bomb8txt)
+                                dir9 = dir8 + bomb8txt + "/"
+                                bomb9 = int(100)
+                                bomb9txt = str(bomb9)
+                                while bomb9 >= 1:
+                                    os.makedirs(dir9 + bomb9txt)
+                                    dir10 = dir9 + bomb9txt + "/"
+                                    bomb10 = int(100)
+                                    bomb10txt = str(bomb10)
+                                    while bomb10 >= 1:
+                                        os.makedirs(dir10 + bomb10txt)
+                                        bomb10 = bomb10 - 1
+                                        bomb10txt = str(bomb10)
+                                    bomb9 = bomb9 - 1
+                                    bomb9txt = str(bomb9)
+                                bomb8 = bomb8 - 1
+                                bomb8txt = str(bomb8)
                             bomb7 = bomb7 - 1
                             bomb7txt = str(bomb7)
                         bomb6 = bomb6 - 1
