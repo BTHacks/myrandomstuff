@@ -3,6 +3,12 @@ import urllib.request
 # Imports TKInter for directory selection
 import tkinter as tk
 from tkinter import filedialog
+#imports platform library for OS detection
+import platform
+# Imports Shutil to copy files
+import shutil
+# Imports OS to remove files
+import os
 
 def select_directory():
     global dir
@@ -15,14 +21,18 @@ def select_directory():
     pass
 
 print("Welcome to the cheese script!")
-answer = str(input("Press any key to select what directory to download the cheese to"))
+answer = str(input("Press enterto select what directory to download the cheese to"))
 dir = str("nothin")
 select_directory()
 answer = int(input("How much cheese do you want?"))
 total = answer
 current = int(0)
+urllib.request.urlretrieve("https://raw.githubusercontent.com/BTHacks/myrandomstuff/refs/heads/main/Python/2.%20Cheese%20Image%20Downloader/cheese.jpg", dir + "cheesebase.jpg")
+src = str(dir + "cheesebase.jpg")
+current = current + 1
 while current <= total:
-    urllib.request(url, "cheese" + str(current) + ".jpg")
+    shutil.copyfile(src, dir + "cheese" + str(current) + ".jpg")
     current = current + 1
+os.remove(src)
 print("Enjoy the cheese!")
-answer = str(input("Press any key to exit"))
+answer = str(input("Press enter to exit"))
